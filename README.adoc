@@ -59,7 +59,7 @@ include::complete/src/main/java/hello/CoffeeConfiguration.java[]
 
 == Create a Spring Bean to load some sample data to our application when we start it
 
-NOTE: We must first remove any data that may still exist from previous executions.
+NOTE: Since we may (re)start our application multiple times, we should first remove any data that may still exist from previous executions. We do this with a `flushAll()` (Redis) server command. Once we've flushed any existing data, we create a small `Flux`, map each coffee name to a `Coffee` object, and save it to the reactive Redis repository. We then query the repo for all values and display them.
 
 `src/main/java/hello/CoffeeLoader.java`
 [source,java]
