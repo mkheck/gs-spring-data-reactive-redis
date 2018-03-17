@@ -97,7 +97,7 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 
 == Test the application
 
-Now that the application is running, you can test it.
+Now that the application is running, you can test it by accessing `http://localhost:8080/coffees` from HTTPie, curl, or your favorite browser.
 
 
 == Summary
